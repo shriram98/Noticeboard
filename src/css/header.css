@@ -1,0 +1,28 @@
+.home-container {
+    padding: 6vh 18vw;
+}
+
+nav {
+    position: relative;
+}
+
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#nav-logo {
+    color: white;
+    float: left;
+    font-size: 20px;
+}
+
+.navbar-item {
+    color:white;
+    font-size: 20px;
+    padding-right: 20px;
+}
+
+
+
+
