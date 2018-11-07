@@ -17,3 +17,8 @@ html, body {
     background-repeat: no-repeat;   
     background-size: cover;
 }
+
+#events {
+    background-color: #ecf0f1;
+    height: 75vh;
+}
