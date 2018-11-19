@@ -13,6 +13,7 @@ export default class SlideShow extends Component {
             speed: 500,
             slidesToShow: 1,
             slidesToScroll: 1
+            
           };
           return (
             <div className="slideshow-container">
@@ -22,16 +23,16 @@ export default class SlideShow extends Component {
                   <img className="slideshow-img" src={require("../res/event1.jpg") }/>
                 </div>
                 <div>
-                  <img className="slideshow-img" src={require("../res/event1.jpg") }/>
+                  <img className="slideshow-img" src={require("../res/event2.jpg") }/>
                 </div>
                 <div>
-                  <img className="slideshow-img" src={require("../res/event1.jpg") }/>
+                  <img className="slideshow-img" src={require("../res/event3.jpeg") }/>
                 </div>
                 <div>
-                  <img className="slideshow-img" src={require("../res/event1.jpg") }/>
+                  <img className="slideshow-img" src={require("../res/event 4.jpg") }/>
                 </div>
                 <div>
-                  <img className="slideshow-img" src={require("../res/event1.jpg") }/>
+                  <img className="slideshow-img" src={require("../res/events.jpg") }/>
                 </div>
               </Slider>
             </div>
