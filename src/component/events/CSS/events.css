@@ -23,7 +23,7 @@ body {
 }
 
 .iconImage {
-    width: 20px;
+    width: 20px;    
     margin-right: 10px;
 }
 
@@ -83,6 +83,7 @@ footer .footer_copyright {
 .carrousel_image {
     
     background-size: cover !important;
+   
 }
 
 .artist_name {
