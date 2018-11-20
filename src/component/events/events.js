@@ -7,7 +7,6 @@ import Header from './component/header_footer/Header';
 import Featured from './component/featured';
 import VunueNfo from './component/venueNfo';
 import Highlight from  './component/Highlights'
-import Pricing from './component/pricing';
 import Location from './component/location';
 import Footer from './component/header_footer/Footer';
 
@@ -29,10 +28,6 @@ class App extends Component {
           <Highlight/>
         </Element>
         
-        <Element name="pricing">
-          <Pricing/>
-        </Element>
-
         <Element name="location">
           <Location/>
         </Element>
