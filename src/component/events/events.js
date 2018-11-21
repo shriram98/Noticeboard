@@ -11,28 +11,33 @@ import Location from './component/location';
 import Footer from './component/header_footer/Footer';
 
 class App extends Component {
+
+  constructor(props) {
+    super(props)
+    console.log(this.props.evt)
+ }
   render() {
     return (
       <div className="App" style={{ height:"1500px",background:'cornflowerblue'}}>
-        <Header/>
+        <Header Ename={this.props.evt.eventname} Venue={this.props.evt.eventtype}/>
 
         <Element name="featured">
-          <Featured/>
+          <Featured speaker={this.props.evt.speaker} date={this.props.evt.date}/>
         </Element>
 
         <Element name="venuenfo">
-          <VunueNfo/>
+          <VunueNfo date= {this.props.evt.date} location={this.props.evt.location} />
         </Element>
         
         <Element name="highlights">
-          <Highlight/>
+          <Highlight discr={this.props.evt.description} contact={this.props.evt.contact}/>
         </Element>
         
         <Element name="location">
-          <Location/>
+          <Location locationMap={this.props.evt.locationMap}/>
         </Element>
         
-        <Footer/>
+        <Footer Ename={this.props.evt.eventname} />
       </div>
     );
   }

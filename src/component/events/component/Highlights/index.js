@@ -1,10 +1,10 @@
 import React from 'react';
 import Description from './Description';
 
-const Highlights = () => {
+const Highlights = ({discr,contact}) => {
     return (
         <div className="highlight_wrapper">
-            <Description/>
+            <Description discr={discr}contact={contact}/>
         </div>
     );
 };

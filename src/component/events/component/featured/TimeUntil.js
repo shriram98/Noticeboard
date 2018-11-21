@@ -2,9 +2,13 @@ import React, { Component } from 'react';
 import Slide from 'react-reveal/Slide';
 
 class TimeUntil extends Component {
+    
+    constructor(props){
+        super(props)
+    }
 
     state = {
-        deadline: 'Dec, 16, 2018',
+        deadline: this.props.date,
         days:'0',
         hours:'0',
         minutes:'0',

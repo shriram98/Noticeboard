@@ -4,7 +4,7 @@ import Zoom from 'react-reveal/Zoom';
 import icon_calendar from '../../CSS/images/icons/calendar.png';
 import icon_location from '../../CSS/images/icons/location.png';
 
-const VunueNfo = () => {
+const VunueNfo = ({date,location}) => {
     return (
         <div className="bck_black">
             <div className="center_wrapper">
@@ -25,7 +25,7 @@ const VunueNfo = () => {
                                         Event Date & Time
                                     </div>
                                     <div className="vn_desc">
-                                        7 August 2017 @10.00 pm
+                                        {date} @10.00 pm
                                     </div>
                                 </div>
                             </div>
@@ -48,7 +48,7 @@ const VunueNfo = () => {
                                         Event Location
                                     </div>
                                     <div className="vn_desc">
-                                        345 Speer Street Oakland, CA 9835
+                                        {location}
                                     </div>
                                 </div>
                             </div>
