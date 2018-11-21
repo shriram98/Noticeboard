@@ -43,7 +43,7 @@ class CardList extends React.Component {
 
         //main container
         return(
-            <div className='tc'> 
+            <div className='pa6 tc ma6'> 
                 <h1>Categories</h1>
                 {/* <SearchBox searchChange={this.onSearchChange} /> */}
                 {cardarray}
