@@ -30,7 +30,7 @@ export default class Header extends Component {
         this.setState({isLoggedIn: true})
     }
 
-    resetLogin(e) {
+    resetLogin() {
         this.setState({isLoggedIn: false})
     }
 
@@ -52,14 +52,14 @@ export default class Header extends Component {
                 <div className="home-container">
                     {/* <div className="login-btn" onClick={this.login}><img src="#" /></div>                 */}
                     <nav>
-                        <div id="nav-logo"onClick={this.resetLogin}>Logo</div>
+                        <div id="nav-logo"onClick={this.resetLogin} onClick={this.login}>Logo</div>
                         <div className="nav-item nav-events">Events</div>
                         <div className="nav-item" onClick={ () => this.scrollToElement('categories')}>Categories</div>
                         <div className="nav-item">Contact</div>
                     </nav>
                     <div className="home-title--wrapper">
                         <div className="intro-text typewriter">All the Events at one place</div>
-                        <button className="home-btn btn-login" onClick={this.resetLogin}>Login</button><br />
+                        <button className="home-btn btn-login">Login</button><br />
                         <button className="home-btn btn-next" onClick={ () => this.scrollToElement('upcoming')}>Show me more</button>
                     </div>
                     {loginSection}
