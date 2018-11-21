@@ -9,6 +9,10 @@
     background-size: cover;
 }
 
+.cat-container {
+    height: 100vh;
+}
+
 nav {
     display: flex;
     position: relative;
