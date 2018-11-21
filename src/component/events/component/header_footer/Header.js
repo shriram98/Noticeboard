@@ -9,6 +9,10 @@ import SideDrawer from './SideDrawer';
 
 class Header extends Component {
 
+    constructor(props){
+        super(props)
+    }
+
     state = {
         drawerOpen: false,
         headerShow: false
@@ -51,8 +55,8 @@ class Header extends Component {
                 <Toolbar>
 
                     <div className="header_logo">
-                        <div className="font_righteous header_logo_venue">The Venue</div>
-                        <div className="header_logo_title">Musical Event</div>
+                        <div className="font_righteous header_logo_venue">{this.props.Venue}</div>
+                        <div className="header_logo_title">{this.props.Ename}</div>
                     </div>
 
                     <IconButton
