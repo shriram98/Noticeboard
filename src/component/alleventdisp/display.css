@@ -1,0 +1,40 @@
+
+  body {
+    margin: 0;
+    font-family: Arial, san-serif;
+    width: 1024px;
+  }
+  
+  .events {
+    list-style: none;
+    padding: 0;
+    width: 960px;
+    border: 10px solid rgba(126, 124, 124, 0.445);
+    margin-left: 30%;;
+  }
+  
+  .event {
+    display: inline-block;
+    cursor: pointer;
+    padding: 20px;
+  }
+  
+  .event__img {
+    width: 200px;
+    height: auto;
+  }
+  
+  .event--selected {
+    background-color: antiquewhite;
+  }
+
+  .event_cat h2 {
+    border-bottom: 4px dashed rgba(0, 0, 255, 0.356);
+    width: 500px;
+    margin-left: 20%;
+    background-color: gray;
+  }
+
+  .event_cat {
+    margin-top: 80px;
+  }
