@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 import {HashRouter} from 'react-router-dom'
 import 'tachyons';
 
-import App from './app'
+import App from './Eventpage'
 
 ReactDOM.render(
     <HashRouter>

@@ -2,7 +2,8 @@ import React from 'react';
 import Carrousel from './Carrousel';
 import TimeUntil from './TimeUntil';
 
-const Featured = () => {
+const Featured = ({speaker, date}) => {
+    
     return (
         <div style={{position:'relative'}}>
 
@@ -10,11 +11,11 @@ const Featured = () => {
 
             <div className="artist_name">
                 <div className="wrapper">
-                    Ariana Grande
+                    {speaker}
                 </div>
             </div>
 
-            <TimeUntil/>
+            <TimeUntil date={date}/>
 
         </div>
     );

@@ -3,6 +3,8 @@ import Card from './Card'
 import {categories} from './categories'
 import SearchBox from './SearchBox'
 
+import axios from 'axios'
+
 
 class CardList extends React.Component {
 
@@ -10,8 +12,17 @@ class CardList extends React.Component {
         super()
         this.state ={
             categories: categories,
-            searchfield: ''
+            searchfield: '',
+            categories: {},
+            
         }
+    }
+
+    componentDidMount() {
+        axios.get('http://localhost/getcategories')
+        .then(function(response) {
+            
+        })
     }
 
     //function to run when search input is given
