@@ -13,15 +13,14 @@ class CardList extends React.Component {
         this.state ={
             categories: categories,
             searchfield: '',
-            categories: {},
             
         }
     }
 
     componentDidMount() {
-        axios.get('http://localhost/getcategories')
+        axios.get('http://localhost:8080/category/tech')
         .then(function(response) {
-            
+            console.log(response.data[0].evt_name);
         })
     }
 

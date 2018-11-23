@@ -10,6 +10,13 @@ import './css/app.css'
 
 
 export default class App extends Component {
+
+    constructor(props) {
+        super(props)
+
+    }
+
+
     render() {
         return(
             // //removed Events from below div for checking
@@ -20,7 +27,6 @@ export default class App extends Component {
             <div>
                 <Switch>
                     <Route exact path='/' component={Header} />
-                    <Route path='/events' component={Events} />
                 </Switch>
             </div>
         );

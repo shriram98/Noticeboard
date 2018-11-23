@@ -1,4 +1,6 @@
 //categories details to be displayed
+
+
 export const categories =[
     {
         url: '',
