@@ -21,3 +21,8 @@
 .event3 {
     background-color: brown;
 }
+
+.event-img {
+    height: 75vh;
+    width: 100%;
+}

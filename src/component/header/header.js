@@ -6,7 +6,7 @@ import '../../css/header.css'
 import LoginSection from './loginSection'
 import CardList from '../categories/CardList'
 import UpcomingEvents from '../upcoming_events/upcoming'
-
+import Zoom from '@material-ui/core/Zoom';
 
 export default class Header extends Component {
     constructor(props) {
@@ -53,7 +53,7 @@ export default class Header extends Component {
                     {/* <div className="login-btn" onClick={this.login}><img src="#" /></div>                 */}
                     <nav>
                         <div id="nav-logo"onClick={this.resetLogin} onClick={this.login}>Logo</div>
-                        <div className="nav-item nav-events">Events</div>
+                        <div className="nav-item nav-events" onClick = {() => {}}>Events</div>
                         <div className="nav-item" onClick={ () => this.scrollToElement('categories')}>Categories</div>
                         <div className="nav-item">Contact</div>
                     </nav>

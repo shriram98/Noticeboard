@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import Events from './component/events/events'
+import Events from '../events/events'
 // import './css/app.css'
 
 var eventlist = [
