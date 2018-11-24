@@ -7,6 +7,7 @@ import LoginSection from './loginSection'
 import CardList from '../categories/CardList'
 import UpcomingEvents from '../upcoming_events/upcoming'
 import Zoom from '@material-ui/core/Zoom';
+import Footer from '../Footer/Footer'
 
 export default class Header extends Component {
     constructor(props) {
@@ -71,6 +72,11 @@ export default class Header extends Component {
                 <Element name="categories">
                     <div className="cat-container">
                         <CardList />
+                    </div>
+                </Element>
+                <Element>
+                    <div className="Footer-container">
+                        <Footer />
                     </div>
                 </Element>
             </div>
