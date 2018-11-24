@@ -1,3 +1,28 @@
 .up-container {
+    margin-top: 10vh;
+    height: 100vh;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.event {
     height: 80vh;
+}
+
+.event1 {
+    background-color: green;
+}
+
+.event2 {
+    background-color: aqua;
+}
+
+.event3 {
+    background-color: brown;
+}
+
+.event-img {
+    height: 75vh;
+    width: 100%;
 }

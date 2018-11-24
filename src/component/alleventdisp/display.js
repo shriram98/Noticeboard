@@ -1,8 +1,12 @@
-import React from 'react'
+import React, {Component} from 'react'
 import './display.css'
 
+import axios from 'axios'
 
-class Display extends React.Component{
+import DisplayGrid from './displaygrid'
+
+
+class EDisplay extends React.Component{
     render(){
         return(
             <div>
@@ -79,4 +83,49 @@ class Display extends React.Component{
 
     }
 }
-export default Display
+
+
+export default class Display extends Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            eventlist: [
+                {img: "#", evtname: "Event1", evtdate:"10/10/10"},
+                {img: "#", evtname: "Event1", evtdate:"10/10/10"},
+                {img: "#", evtname: "Event1", evtdate:"10/10/10"},
+                {img: "#", evtname: "Event1", evtdate:"10/10/10"},
+                {img: "#", evtname: "Event1", evtdate:"10/10/10"}
+            ],
+        }
+    }
+
+    componentWillMount() {
+        var comp = this
+        axios.get('/eventlist')
+        .then(function(response) {
+            comp.eventlist = response.data
+        })
+    }
+
+    render() {
+
+        var array = this.state.eventlist
+        const displayarray = array.map((user, i) => {
+            return(
+                <DisplayGrid
+                    img={this.state.eventlist[i].img}
+                    evtname={this.state.eventlist[i].evtname}
+                    evtdate={this.state.eventlist[i].evtdate}
+                />    
+            )
+        })
+
+    return(
+        <div id="wrap">
+            <div id="columns" class="columns_4">
+                {displayarray}
+            </div>
+        </div>
+        )
+    }
+}

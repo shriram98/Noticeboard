@@ -3,6 +3,8 @@ import Card from './Card'
 import {categories} from './categories'
 import SearchBox from './SearchBox'
 
+import {Redirect} from 'react-router-dom'
+
 import axios from 'axios'
 
 
@@ -13,27 +15,25 @@ class CardList extends React.Component {
         this.state ={
             categories: categories,
             searchfield: '',
-            categories: {},
-            
         }
     }
 
-    componentDidMount() {
-        axios.get('http://localhost/getcategories')
+    componentWillMount() {
+        axios.get('http://localhost:8080/category/tech')
         .then(function(response) {
-            
+            console.log(response.data[0].evt_name);
         })
     }
 
     //function to run when search input is given
     onSearchChange = (event) => {
         this.setState({searchfield: event.target.value})
-        }
-        
+    }
     
     //function ends
 
     render(){
+
             //filteredCategories filters the categories according to what input is given in search field
         const  filteredCategories = this.state.categories.filter(category =>{
             return category.name.toLowerCase().includes(this.state.searchfield.toLowerCase())
@@ -47,7 +47,9 @@ class CardList extends React.Component {
             url={categories[i].url}
             id={categories[i].id} 
             name={categories[i].name} 
-            desc={categories[i].desc} />
+            desc={categories[i].desc} 
+            setRedirect= {this.setRedirect}
+            />
         );
         })
         //cardarray ends
@@ -55,7 +57,7 @@ class CardList extends React.Component {
         //main container
         return(
             <div className='pa6 tc ma6'> 
-                <h1>Categories</h1>
+                <h1 >Categories</h1>
                 {/* <SearchBox searchChange={this.onSearchChange} /> */}
                 {cardarray}
             </div>
