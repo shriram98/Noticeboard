@@ -11,10 +11,10 @@ export default class UpcomingEvents extends Component {
         super(props);
         this.state = {
             src: [
-                {img: "#"},
-                {img: "#"},
-                {img: "#"},
-                {img: "#"},
+                {img:"http://heridono.com/wp-content/uploads/2018/10/0fc075e6a9ee4d04ad221d474268b43a.jpg.1000x1000_q85_replace_alpha-white_upscale_square@2x.jpg"},
+                {img: "http://www.iitb.ac.in/sites/default/files/event/2017-09/TechFest.jpg"},
+                {img: "https://cdn.explara.com/eventbriteindia20170913192513.png"},
+                {img:""}
             ]
         }
     }
@@ -41,7 +41,7 @@ export default class UpcomingEvents extends Component {
             console.log(src[i].img)
         }
         return(
-            <div className="up-container">
+            <div className="up-container pa5 bg-gold ">
                 <Slide {...properties}>
                     {upcmng}
                 </Slide>
