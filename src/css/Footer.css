@@ -1,0 +1,21 @@
+.footer{
+    color: #e67e22;
+    background-color: #333;
+    padding-bottom: 300px;
+    font-size: 20px;
+    margin-top: 10px;
+    
+}
+
+.nameListing{
+    color: #e67e22;
+    padding-left: 50%;
+}
+
+.contribute{
+    text-align: center;
+}
+
+.github {
+    padding-top: 70px;
+}

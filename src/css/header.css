@@ -2,8 +2,8 @@
     height: 100vh;
     width: 100%;
     padding: 6vh 18vw;
-    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.45) rgba(0, 0, 0, 0.45)), url(../res/background_1.jpg);
-    background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(../res/background_1.jpg);
+    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.562) rgba(0, 0, 0, 0.562)), url(../res/background_1.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.582), rgba(0, 0, 0, 0.788)), url(../res/background_1.jpg);
     background-position: center;
     background-repeat: no-repeat;   
     background-size: cover;
