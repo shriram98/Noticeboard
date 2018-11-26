@@ -52,7 +52,7 @@ export default class Header extends Component {
                 <div className="home-container">
                     {/* <div className="login-btn" onClick={this.login}><img src="#" /></div>                 */}
                     <nav>
-                        <div id="nav-logo"onClick={this.resetLogin} onClick={this.login}>Logo</div>
+                        <div id="nav-logo"onClick={this.resetLogin} onClick={this.login}><img src="https://cdn.designcrowd.com/blog/2016/May/beverage-day-2016/22_300x300.png"></img></div>
                         <div className="nav-item nav-events" onClick = {() => {}}>Events</div>
                         <div className="nav-item" onClick={ () => this.scrollToElement('categories')}>Categories</div>
                         <div className="nav-item">Contact</div>
@@ -66,13 +66,16 @@ export default class Header extends Component {
                 </div>
                 </Element>
                 <Element name="upcoming">
+                    <div className="bg-black ">
                     <UpcomingEvents />
+                    </div>
                 </Element>
                 <Element name="categories">
-                    <div className="cat-container">
+                    <div className="cat-container bg-red">
                         <CardList />
                     </div>
                 </Element>
+                
             </div>
             
         );

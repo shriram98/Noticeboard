@@ -14,9 +14,10 @@ class Card extends React.Component {
                 <div className='tc bg-light-green  br5 pa3 ma2 w5 h5 fl   grow'>
                     <img alt='Categoryphoto' src={this.props.url} />
                     <div>
-                        <h2>{this.props.name}</h2>
-                        <p>{this.props.desc}</p>
+                        <h2 className="black">{this.props.name}</h2>
+                        <p className="black">{this.props.desc}</p>
                     </div>
+
                 </div>
             </a>
         );
