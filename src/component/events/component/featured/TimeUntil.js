@@ -5,6 +5,7 @@ class TimeUntil extends Component {
     
     constructor(props){
         super(props)
+
     }
 
     state = {
@@ -35,7 +36,8 @@ class TimeUntil extends Component {
       
     }
 
-    componentDidMount(){
+    componentWillMount(){
+
         setInterval(()=> this.getTimeUntil(this.state.deadline),1000)
     }
 

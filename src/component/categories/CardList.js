@@ -10,8 +10,8 @@ import axios from 'axios'
 
 class CardList extends React.Component {
 
-    constructor(){
-        super()
+    constructor(props){
+        super(props)
         this.state ={
             categories: categories,
             searchfield: '',
@@ -28,7 +28,7 @@ class CardList extends React.Component {
     //function to run when search input is given
     onSearchChange = (event) => {
         this.setState({searchfield: event.target.value})
-    }
+    } 
     
     //function ends
 
@@ -48,7 +48,6 @@ class CardList extends React.Component {
             id={categories[i].id} 
             name={categories[i].name} 
             desc={categories[i].desc} 
-            setRedirect= {this.setRedirect}
             />
         );
         })
