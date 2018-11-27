@@ -27,27 +27,26 @@ class Events extends Component {
    var comp = this
   axios.get('http://localhost:8080/getcurrent')
   .then(function(response) {
-    comp.setState({evt: response.data})
-    console.log(comp.state.evt.evtdate)
+    comp.setState({evt: response.data[0]})
   })
  }
  
-componentWillUpdate() {
-  var comp = this
-  axios.get('http://localhost:8080/getcurrent')
-  .then(function(response) {
-    comp.setState({evt: response.data})
-  })
-}
+// componentWillUpdate() {
+//   var comp = this
+//   axios.get('http://localhost:8080/getcurrent')
+//   .then(function(response) {
+//     comp.setState({evt: response.data})
+//   })
+// }
 
 
   render() {
     return (
       <div className="App" style={{ height:"1500px",background:'cornflowerblue'}}>
-        <Header Ename={this.state.evt.eventname} Venue={this.state.evt.evttype}/>
+        <Header Ename={this.state.evt.evtname} Venue={this.state.evt.evtloc}/>
 
         <Element name="featured">
-          <Featured speaker={this.state.evt.speaker} date={this.state.evt.evtdate}/>
+          <Featured speaker={this.state.evt.speaker} date='30, Dec, 2018'/>
         </Element>
 
         <Element name="venuenfo">
@@ -55,7 +54,7 @@ componentWillUpdate() {
         </Element>
         
         <Element name="highlights">
-          <Highlight discr={this.state.evt.description} contact={this.contact}/>
+          <Highlight discr={this.state.evt.evt_desc} contact={this.state.evt.contact}/>
         </Element>
         
         <Element name="location">

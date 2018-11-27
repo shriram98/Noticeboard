@@ -18,12 +18,12 @@ class CardList extends React.Component {
         }
     }
 
-    componentWillMount() {
-        axios.get('http://localhost:8080/category/tech')
-        .then(function(response) {
-            console.log(response.data[0].evt_name);
-        })
-    }
+    // componentWillMount() {
+    //     axios.get('http://localhost:8080/category/tech')
+    //     .then(function(response) {
+    //         console.log(response.data[0].evt_name);
+    //     })
+    // }
 
     //function to run when search input is given
     onSearchChange = (event) => {

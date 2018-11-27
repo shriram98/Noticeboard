@@ -102,7 +102,6 @@ export default class Display extends Component {
         axios.get('http://localhost:8080/eventlist')
         .then(function(response) {
             comp.setState({eventlist: response.data})
-            console.log(comp.state.eventlist)
         })
     }
 

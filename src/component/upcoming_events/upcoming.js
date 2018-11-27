@@ -23,7 +23,8 @@ export default class UpcomingEvents extends Component {
         var comp = this;
         axios.get('http://localhost:8080/upcomingevents')
         .then(function(response) {
-            comp.setState({src: response.data})
+            // comp.setState({src: response.data})
+            console.log(comp.state.src);
         })
     }
     render() {
@@ -35,11 +36,17 @@ export default class UpcomingEvents extends Component {
             arrows: true
         }
         var src = this.state.src
-        var upcmng =[]
-        for(var i in src) {
-            upcmng.push(<img key={i} className="event-img" src={src[i].img} />)
-            console.log(src[i].img)
-        }
+        // for(var i in src) {
+        //     upcmng.push(<img key={i} className="event-img" src={src[i].img} />)
+        // }
+
+        const upcmng =src.map((user,i)=> {
+                return (
+                    <img key={i} className="event-img" src={src[i].img} />
+            );
+        })
+
+
         return(
             <div className="up-container pa5 bg-gold ">
                 <Slide {...properties}>
