@@ -95,7 +95,7 @@ export default class Header extends Component {
                     </div>
                 </Element>
                 <Element name="categories">
-                    <div className="cat-container bg-red">
+                    <div className="cat-container ">
                         <CardList />
                     </div>
                 </Element>
