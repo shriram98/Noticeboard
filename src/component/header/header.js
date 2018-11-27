@@ -8,13 +8,17 @@ import CardList from '../categories/CardList'
 import UpcomingEvents from '../upcoming_events/upcoming'
 import Zoom from '@material-ui/core/Zoom';
 
+import CreateEvent from './createEvent'
+
 export default class Header extends Component {
     constructor(props) {
         super(props);
-        this.state = { isLoggedIn: false}
+        this.state = { isLoggedIn: false, isPopup: false}
         this.login = this.login.bind(this)
         this.resetLogin = this.resetLogin.bind(this)
         this.scrollToElement = this.scrollToElement.bind(this)
+        this.loadpopup = this.loadpopup.bind(this);
+        this.removepopup = this.loadpopup.bind(this);
     }
 
     scrollToElement(element) {
@@ -22,7 +26,7 @@ export default class Header extends Component {
             duration: 1000,
             delay:100,
             smooth: true,
-            offset: 0
+            offset: 0,
         });
     }
 
@@ -34,9 +38,18 @@ export default class Header extends Component {
         this.setState({isLoggedIn: false})
     }
 
+    loadpopup() {
+        this.setState({isPopup: true})
+    }
+    removepopup() {
+        this.setState({isPopup: false}) 
+        console.log('called')
+    }
+
     render() {
         let isloggedin = this.state.isLoggedIn;
         let loginSection 
+        var isPopup = this.state.isPopup;
 
         if(isloggedin) {
             loginSection = <div className="login-div"><LoginSection resetLogin={this.resetLogin} /></div>;
@@ -45,15 +58,25 @@ export default class Header extends Component {
             loginSection = <div></div>;
         }
 
+        let section;
+
+        if(isPopup) {
+            section = <div className="createEvent"><CreateEvent removepopup={this.removepopup}/></div>
+        }
+        else {
+            section = <div></div>
+        }
+
 
         return(
             <div>
                 <Element name="home">
                 <div className="home-container">
-                    {/* <div className="login-btn" onClick={this.login}><img src="#" /></div>                 */}
+                    {/* <div className="login-btn" onClick={this.login}><img src="#" /></div>*/}
                     <nav>
-                        <div id="nav-logo"onClick={this.resetLogin} onClick={this.login}><img src="https://cdn.designcrowd.com/blog/2016/May/beverage-day-2016/22_300x300.png"></img></div>
+                        <div id="nav-logo"onClick={this.resetLogin} onClick={this.removepopup}><img src="https://cdn.designcrowd.com/blog/2016/May/beverage-day-2016/22_300x300.png"></img></div>
                         <div className="nav-item nav-events" onClick = {() => {}}>Events</div>
+                        <div className="nav-item" onClick={this.loadpopup}>Add Event</div>
                         <div className="nav-item" onClick={ () => this.scrollToElement('categories')}>Categories</div>
                         <div className="nav-item">Contact</div>
                     </nav>
@@ -63,6 +86,7 @@ export default class Header extends Component {
                         <button className="home-btn btn-next" onClick={ () => this.scrollToElement('upcoming')}>Show me more</button>
                     </div>
                     {loginSection}
+                    {section}
                 </div>
                 </Element>
                 <Element name="upcoming">
@@ -74,6 +98,9 @@ export default class Header extends Component {
                     <div className="cat-container bg-red">
                         <CardList />
                     </div>
+                </Element>
+                <Element>
+                    <div className=""></div>
                 </Element>
                 
             </div>

@@ -14,14 +14,14 @@ export const categories =[
         url:img2,
         id: 1,
         name: 'Gaming',
-        desc: 'DESC1'
+        desc:'Competitions,Conventions,Fanfests'
     },
 
     {
         url:img5,
         id: 2,
         name: 'Tech',
-        desc: 'DESC2'
+        desc:'Trainings,Conferences,Seminars'
         
     },
 
@@ -29,27 +29,27 @@ export const categories =[
         url:img3,
         id:3,
         name:'Music',
-        desc: 'BLAH'
+        desc: 'Concerts,Orchestras,Operas'
     },
 
     {
         url:img1,
         id:4,
         name:'Art',
-        desc: 'BLAH'
+        desc: 'Exhibitions,Conferences,Galleries'
     },
 
     {
         url:img4,
         id:5,
         name:'StandUp',
-        desc: 'BLAH'
+        desc: 'Comedy,Improv,Gigs'
     },
     {
         url:img6,
-        id:3,
+        id:6,
         name:'Sports',
-        desc: 'BLAH'
+        desc: 'Marathons,Cyclathons,Tournaments'
     },
 
     // {
