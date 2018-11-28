@@ -10,7 +10,7 @@
 }
 
 .createEvent {
-    position: fixed;
+    /* position: fixed;
     top: 10vh;
     left: 10vw;
     width: 80vw;
@@ -18,6 +18,31 @@
     overflow: scroll;
     background-color: white;
     z-index: 9999;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #614385; 
+    background: -webkit-linear-gradient(to right, #516395, #614385);  
+    background: linear-gradient(to right, #516395, #614385); 
+      font-family: 'Raleway', sans-serif;
+      letter-spacing: 0.1em;
+    border: solid;
+    border-width: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  */
+    width: 400px;
+    height: 700px;
+    background: #EDEDED;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.3);
 }
 
 .cat-container {
