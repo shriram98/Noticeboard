@@ -1,6 +1,6 @@
 import React from 'react'
 import '../../css/Footer.css'
-import {github} from 'react-icons/io'
+// import {github} from 'react-icons/io'
 class Footer extends React.Component{
     render(){
         return(

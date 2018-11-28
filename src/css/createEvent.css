@@ -2,5 +2,19 @@ label {
     font-size:  15px;
     color: black;
     font-family: 'Courier New', Courier, monospace;
-    font-weight: bold   ;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+.input-field {
+    margin: 20px;
+}
+
+#event-desc {
+    width: 60vw;
+    margin: 10px;
+}
+
+.submit-btn {
+    margin: 50px;
 }

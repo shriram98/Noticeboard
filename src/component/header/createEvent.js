@@ -21,13 +21,15 @@ export default class CreateEvent extends Component {
             evtloc :  document.getElementById('event-city').value,
             locationMap : document.getElementById('event-locMap').value,
         }
-        axios.post('/newevent', formdata)
+        axios.post('/newevent', JSON.stringify(formdata))
         .then(res => {
             console.log('success');
+            alert('data Entered Successfully')
             comp.props.removepopup();
         })
         .catch(error  => {
             console.log('error')
+            alert('Data Entry Failed')
             comp.props.removepopup();
         })
     }
@@ -45,10 +47,10 @@ export default class CreateEvent extends Component {
                 <input type="text" id="event-speaker" className="input-field"/>
                 <br />
                 <label>Type</label>
-                <input type="text" id="event-type" />
+                <input type="text" id="event-type" className="input-field"/>
                 <br />
                 <label>Contact</label>
-                <input type="text" id="event-contact" />
+                <input type="text" id="event-contact" className="input-field"/>
                 <br />
                 <label>Description</label>
                 <input type="text-area" id="event-desc" className="input-field"/>
