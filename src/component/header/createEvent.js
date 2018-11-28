@@ -21,8 +21,10 @@ export default class CreateEvent extends Component {
             evtloc :  document.getElementById('event-city').value,
             locationMap : document.getElementById('event-locMap').value,
         }
-        axios.post('/newevent', JSON.stringify(formdata))
-        .then(res => {
+
+        console.log(formdata);
+        axios.post('http://localhost:8080/newevent', formdata)
+        .then(function(res) {
             console.log('success');
             alert('data Entered Successfully')
             comp.props.removepopup();
