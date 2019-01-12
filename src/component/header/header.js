@@ -59,11 +59,11 @@ export default class Header extends Component {
                         <div className="nav-item nav-events" onClick = {() => {}}>Events</div>
                         <div className="nav-item" onClick={this.loadpopup}>Add Event</div>
                         <div className="nav-item" onClick={ () => this.scrollToElement('categories')}>Categories</div>
-                        <div className="nav-item" onClick={ () => this.scrollToElement('footer')}>Contact</div>
+                        <div className="nav-item" onClick={ () => this.scrollToElement('footer')}>Contribute</div>
                     </nav>
                     <div className="home-title--wrapper">
                         <div className="intro-text typewriter">All the Events at one place</div>
-                        <button className="home-btn btn-login">Login</button><br />
+                        {/* <button className="home-btn btn-login">Login</button><br /> */}
                         <button className="home-btn btn-next" onClick={ () => this.scrollToElement('upcoming')}>Show me more</button>
                     </div>
                     {section}

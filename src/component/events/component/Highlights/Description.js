@@ -15,9 +15,9 @@ const Description = ({discr,contact}) => {
                 <div className="fl w-100 tc grow center_wrapper">
                     <h1>Contact info </h1>
                     <div className="highlight_description m">
-                    <b>email:</b> {contact}[0]
+                    <b>email:</b> {contact[0]}
                     <br></br>
-                    <b>Phone no:</b>: {contact}[1]
+                    <b>Phone no:</b>: {contact[1]}
     
                 </div>
 

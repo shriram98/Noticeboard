@@ -54,7 +54,7 @@ class Events extends Component {
         </Element>
         
         <Element name="highlights">
-          <Highlight discr={this.state.evt.evt_desc} contact={this.state.evt.contact}/>
+          <Highlight discr={this.state.evt.evt_desc} contact={["abc@gmail.com","1234567890"] }/>
         </Element>
         
         <Element name="location">
