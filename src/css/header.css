@@ -1,5 +1,53 @@
 .home-container {
-    padding: 6vh 18vw;
+    height: 100vh;
+    width: 100%;
+    padding: 6vh 8vw;
+    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.45) rgba(0, 0, 0, 0.45)), url(../res/background_1.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.74), rgba(3, 3, 3, 0.712)), url(../res/background_1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;   
+    background-size: cover;
+}
+
+.createEvent {
+    /* position: fixed;
+    top: 10vh;
+    left: 10vw;
+    width: 80vw;
+    height: 80vh;
+    overflow: scroll;
+    background-color: white;
+    z-index: 9999;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #614385; 
+    background: -webkit-linear-gradient(to right, #516395, #614385);  
+    background: linear-gradient(to right, #516395, #614385); 
+      font-family: 'Raleway', sans-serif;
+      letter-spacing: 0.1em;
+    border: solid;
+    border-width: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  */
+    width: 400px;
+    height: 700px;
+    background: #EDEDED;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.3);
+}
+
+.cat-container {
+    height: 100vh;
+    margin-left: 8vw;
 }
 
 nav {
@@ -10,33 +58,39 @@ nav {
 .nav-fixed {
     display: flex;
     position: fixed;
-    top: 6vh;
+    top: 5vh;
     bottom: 0;
     left: 18vw;
     right: 18vw;
 }
 
 .nav-events {
-    margin-left: auto;
+    margin-left: auto ;
 }
 
 #nav-logo {
     color: white;
-    font-size: 20px;
+    font-size: 25px;
+    height: 100px;
+    width: 100px;
+
 }
 
 .nav-item {
-    color:white;
-    font-size: 20px;
+    color: #e0812e;
+    font-size: 25px;
     padding-right: 20px;
     cursor: pointer;
+
+
+
 }
 
 .login-btn {
     position: fixed;
     top: 5vh;
     right: 2vw;
-    background-color: white;
+    background-color: whitesmoke;
     border-radius: 50%;
     height: 50px;
     width: 50px;
@@ -48,8 +102,18 @@ nav {
 }
 
 .btn-login {
-    width: 20vw;
+    width: 10vw;
     margin: 50px;
+    color: whitesmoke;
+}
+
+.login-div {
+    position: absolute;
+    top: 20vh;
+    left: 25vw;
+    background-color: white;
+    height: 60vh;
+    width: 50vw; 
 }
 
 .login-div {
@@ -63,20 +127,25 @@ nav {
 
 .home-btn {
     border-radius: 30px;
-    border-color: white;
+    border-color: rgb(248, 248, 85); 
     background-color: transparent;
     height: 8vh;
     cursor: pointer;  
+    
 }
+.home-btn:hover {
+    background-color: #e0812e;
 
+}
 .btn-next {
     width: 30vw;
     margin: 20px;
+    color:whitesmoke;
 }
 
 .intro-text {
     font-size: 60px;
-    color: white;
+    color: whitesmoke;
     font-weight: 500;
     padding-top: 15vh;
     padding-bottom: 4vh;

@@ -1,33 +1,28 @@
 import React, {Component} from 'react'
+import {Route, Switch} from 'react-router-dom'
+
+import Events from './component/events/events'
+import Header from './component/header/header'
+import Display from './component/alleventdisp/display'
 
 import './css/app.css'
 
-import Header from './components/header'
-import Events from './components/events'
-import Categories from './components/categories'
-import Works from './components/works'
-import Footer from './components/footer'
 
 export default class App extends Component {
+
     render() {
+        var evt
         return(
-            <div>
-                <section className="section" id="home">
-                    <Header />
-                </section>
-                <section className="section" id="events">
-                    <Events />
-                </section>
-                <section className="section" id="categories">
-                    <Categories />
-                </section>
-                <section className="section" id="works">
-                    <Works />
-                </section>
-                <footer>
-                    <Footer />
-                </footer>
-            </div>
+            // //removed Events from below div for checking
+            // <div>
+            
+            //    <CardList categories={categories} />
+            // </div>
+            <Switch>
+                <Route exact path="/" component={Header} />
+                <Route path="/event" component={Events} />
+                <Route path="/eventlist" component={Display} />
+            </Switch>
         );
     }
 }
